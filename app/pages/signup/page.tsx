@@ -5,7 +5,7 @@ import UserLayout from '../user/UserLayout';
 const SignupPage: React.FC = () => {
   return (
     <UserLayout>
-      Sign Up page!
+      signup
     </UserLayout>
   );
 };
