@@ -1,6 +1,6 @@
 // pages/user/signup.tsx
 import React from 'react';  
-import UserLayout from './UserLayout';
+import UserLayout from '../user/UserLayout';
 
 const SignupPage: React.FC = () => {
   return (
