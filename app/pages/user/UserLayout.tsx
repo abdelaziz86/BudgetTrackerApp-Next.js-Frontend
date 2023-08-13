@@ -12,10 +12,20 @@ const UserLayout: React.FC<UserLayoutProps> = ({ children }) => {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh', /* Set minimum height to cover the viewport */
-        background: 'linear-gradient(#e66465, #9198e5)', /* Apply background gradient */
+        background: 'linear-gradient(#9BEE95, #95EED3)', /* Apply background gradient */
       }}>
         <div className="user-layout">
-          {children}
+          <center>
+            <div className="card lg:card-side bg-base-100 shadow-xl" style={{"width" : "50%", "marginTop" : "10%"}}> 
+                <div className="card-body">
+                    {children}
+                  
+                    <div className="card-actions justify-center">
+                    
+                </div>
+            </div>
+            </div>
+        </center>
         </div>
       </body>
     </html>
