@@ -3,7 +3,6 @@
 import React from 'react';
 import UserLayout from '../user/UserLayout';
 import { signUp } from '@/apis/user';
-import axios from 'axios';
 
 const SignupPage: React.FC = () => {
   const [name, setName] = React.useState('');
@@ -15,14 +14,12 @@ const SignupPage: React.FC = () => {
     e.preventDefault(); // Prevent default form submission
 
     try {
-      const signUpData = { name,  email, password };
-      console.log(signUpData); 
-      const response = await axios.post(`http://localhost:3000/auth/signup`, signUpData);
-      return response.data;
-      //const response = await signUp(signUpData);
+      const signUpData = { name, surname, email, password };
+      
+      const response = await signUp(signUpData);
       // Handle successful signup (e.g., set user state, redirect, etc.)
-      prompt("Signup success:", response.data) ; 
-      console.log('Signup success:', response.data);
+      prompt("Signup success:", response) ; 
+      console.log('Signup success:', response);
     } catch (error) {
       // Handle error (e.g., display error message)
       console.error('Signup error:', error);
