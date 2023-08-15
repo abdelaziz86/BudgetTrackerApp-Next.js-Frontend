@@ -5,7 +5,7 @@ const API_BASE_URL  = 'http://localhost:3000';
 export const signUp = async (signUpData: IUser) => {
   try {
     console.log('Sending sign-up request:', signUpData);
-    const response = await axios.post("http://localhost:3000/auth/signup", signUpData);
+    const response = await axios.post("http://127.0.0.1:3000/auth/signup", signUpData);
     console.log('Sign-up response:', response.data);
     return response.data;
   } catch (error) {
